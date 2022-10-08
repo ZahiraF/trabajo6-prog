@@ -18,17 +18,145 @@
         <div class="consignas">
             <h1>Trabajo Practico N°6 Programación Estática</h1>
             <h2>1) ¿Qué versiones de JavaScript hay en el mercado?</h2>
-            <p></p>
+
+            <p> Javascript es definido y estandarizado por una organización internacional llamada Ecma Iternational. Es el organismo actualmente responsable de la definición de la especificación oficial JavaScript, a la que se denomina ECMAScript o Standard
+                ECMA-262. Esta sirve para que las empresas o entidades que desarrollan navegadores web reconozcan JavaScript y pueda ser usado por los programadores web, y así todos usen el mismo lenguaje y obtengan los mismos resultados.</p>
+            <p> Aunque todos los navegadores usan JavaScript a partir de la especificación ECMAScript, hay matices, diferentes particularidades y resultados entre navegadores.</p>
+            <p> La Mozilla Foundation, creadora del navegador Mozilla Firefox, mantiene una numeración de versiones (1.7, 1.8, 1.8.1, …1.8.5, 1.9, 1.15, 1.20 …) que indica la evolución del intérprete JavaScript dentro del navegador:</p>
+            <ul>
+                <li>ES1: (Junio 1997) Primera versión estandarizada. Tiene muchas de las características que se usan hoy en día, como objetos y herencia prototipal. Procuraba definir un lenguaje apropiado para dotar de más dinamismo a la web.</li>
+                <li>ES2: (Junio 1998) Estandarizado, casi sin cambios.</li>
+                <li>ES3: (Diciembre 1999) Funcional en todos los navegadores (excepto las versiones anteriores de Internet Explorer). Agrega soporte para igualdad estricta, manejo de excepciones, etc.</li>
+                <li>ES5: (Diciembre 2009)</li>
+                <li>ES5.1: (Junio 2011)</li>
+                <li>ES6: (Junio 2015)Añadió una serie de características muy importantes demandadas cada vez más por los programadores, las cuales supusieron un cambio importante en el lenguaje. Son extensamente utilizadas por todos los frameworks actuales
+                    y han sido incorporadas a los entornos de javascript modernos, tanto en los navegadores como en node.js. A partir de este año las actualizaciones son anuales para evitar cambios tan bruscos.</li>
+                <li>ES7: (Junio 2016)Una actualización que añade pocos cambios comparada a su versión anterior. </li>
+                <li>ES8: (Junio 2017)Introduce algunos cambios mayores y unos menores pero que vienen a ser de mucha ayuda en el día a día. Permite dejar comas sueltas al declarar objetos, arrays y parámetros para funciones.</li>
+                <li>ES9: (Junio 2018)Incluye mejoras a las cosas que ya estaban.</li>
+                <li>ES10: (Junio 2019)</li>
+                <li>ES11: (Junio 2020)</li>
+                <li>ES12: (Junio 2021)</li>
+            </ul>
+            <p>Desde ES1 a ES6 es lo que se conoce como código seguro ya que es compatible con todos los navegadores y motores que corran JavaScript al 100%.</p>
             <h2>2) ¿Cómo se integra JavaScript a HTML?</h2>
-            <p></p>
+            <p>JavaScript es un lenguaje utilizado principalmente con el lenguaje HTML, es un lenguaje interpretado que se embebe en una página web HTML. Un lenguaje interpretado significa que a las instrucciones las analiza y procesa el navegador en el
+                momento que deben ser ejecutadas. Hay varias formas de introducir JavaScript a HTML:</p>
+            <ul>
+                <li>Agregar JavaScript directamente a un archivo HTML usando las etiquetas <b>&lt;script&gt; &lt;/script&gt;</b>, envolviendo todo el código JS que se agrega:
+                    <ul>
+                        <li>Entre las etiquetas &lt;head&gt; &lt;/head&gt; </li>
+                        <li>Entre las etiquetas &lt;body&gt; &lt;/body&gt; </li>
+                    </ul>
+                </li>
+                <li>Agregar código JavaScript a un archivo separado (archivo externo):
+                    <ul>
+                        <li>Entre las etiquetas &lt;body&gt; &lt;/body&gt; <br/> Ejemplo: &lt;script src="./script.js"&gt;&lt;/script&gt; <br/> Esto apuntaría a un archivo llamado "script.js" que está en el mismo directorio o carpeta del archivo .html. También
+                            se puede enlazar a otras carpetas usando ".." en la ruta del archivo. <br/> Ejemplo: &lt;script src="js/script.js"&gt;&lt;/script&gt; Este ejemplo también apunta a un archivo llamado "script.js" pero en otra carpeta distinta
+                            a la del archivo .html.</li>
+                        <li>Entre las etiquetas &lt;head&gt; &lt;/head&gt; de la misma forma que en el body.</li>
+                    </ul>
+                </li>
+            </ul>
             <h2>3) ¿Cómo es el manejo de las variables, tipos de datos y expresiones regulares en JS?</h2>
-            <p></p>
+            <h3>Variables</h3>
+
+            <p>Las variables son depósitos donde se guarda información, un espacio de almacenamiento de reserva en memoria. Tienen un nombre y un tipo (valor entero, valor real, cadena de caracteres, valores lógicos). Los nombres de una variable puede contener
+                sólo caracteres alfanuméricos, es decir, letras de la A a la Z y números del 0 al 9, guión bajo (_) y dólar ($) también son aceptados. Una variable no puede tener el mismo nombre que una palabra clave del lenguaje. Ejemplos:</p>
+            <h3>Tipos de datos</h3>
+            <p>Una variable puede almacenar:</p>
+            <ul>
+                <li><b>Valores Enteros</b> (150, 780, etc.)</li>
+                <li><b>Valores Reales</b> (2.25, 8.90, 7.03, etc.)</li>
+                <li><b>Cadenas de caracteres</b> ('Zahira', 'Fernandez', 'Audi', etc.), para guardar y manipular texto. Se escrben entre comillas dobles, simples o francesas. Dentro de una cadena de texto se pueden usar comillas siempre y cuando no sean del
+                    mismo tipo que las comillas que rodean a la cadena de caracteres.</li>
+                <li><b>Valores lógicos</b> (true,false), aquellos que solo pueden tener 2 valores, verdadero o falso. El valor de 0, null, undefined o cadena de texto vacía es <b>falso</b>. </li>
+                <li><b>Matrices</b></li>
+                <li><b>Symbol</b> tipo de dato cuyos casos son únicos e inmutables.</li>
+                <li><b>Object</b> puede contener mas variables en su interior</li>
+            </ul>
+            <h3>Expresiones regulares</h3>
             <h2>4) ¿Cómo son todas las formas de declaración de funciones en JS?</h2>
-            <p></p>
+            <p>Hay 4 formas de declarar variables:</p>
+            <ul>
+                <li>usando <b>var</b></li>
+                <li>usando <b>let</b></li>
+                <li>usando <b>const</b></li>
+                <li>sin usar nada</li>
+            </ul>
+            <p>Ejemplos:</p>
+            <ul>
+                <li>var marcaGaseosa = "Fanta";</li>
+                <li>let nombre = "Pepito";</li>
+                <li>const pi = 3.14</li>
+                <li></li>
+            </ul>
+            <p>Las variables siempre se declaran con var, let o const. la palabra var es usada en todos los códigos en todos los códigos JS desde 1995 a 2015. Las palabras let y const fueron añadidas en la versión de JS de 2015. Es por esto que si se quiere
+                ejecutar el código en navegadores antiguos se debe usar var. Como regla general las variables siempre se declaran con const, pero si el valor de la variable puede cambiar entonces se usa let.</p>
             <h2>5) ¿Cuáles son los operadores y conversión entre tipos?</h2>
-            <p></p>
-            <h2>6) ¿Cuáles son las estructura de control de JS?</h2>
-            <p></p>
+            <h3>Operador de asignación</h3>
+            <p>El operador de asignacion es el símbolo de igualdad (=), y sirve para asignarle un valor a una variable.</p>
+            <h3>Adición o suma </h3>
+            <p>Se usa el símbolo "+"</p>
+            <h3>Multiplicación</h3>
+            <p>Se usa el símbolo "*"</p>
+            <h3>Sustracción o resta</h3>
+            <p>Se usa el símbolo "-"</p>
+            <h3>División</h3>
+            <p>Se usa el símbolo "/"</p>
+            <h3>Resto o módulo</h3>
+            <p>Se usa el símbolo "%"</p>
+            <h3>Operadores de comparación</h3>
+            <ul>
+                <li><b>Igualdad</b> Devuelve el valor true si ambos operandos son iguales (==)</li>
+                <li><b>Desigualdad</b> Devuelve el valor true si ambos operandos NO son iguales (!=)</li>
+                <li><b>Estrictamente iguales</b> Devuelve el valor true si ambos operandos son iguales y tienen el mismo tipo (===)</li>
+                <li><b>Estrctamente desiguales</b> Devuelve el valor true si ambos operandos no son iguales y/o no son del mismo tipo. </li>
+                <li><b>Mayor que</b> Devuelve el valor true si el operando de la izquierda es mayor al de la derecha(>)</li>
+                <li><b>Mayor o igual que</b> Devuelve el valor true si el operando de la izquierda es mayor o igual al de la derecha (>=)</li>
+                <li><b>Menor que</b> Devuelve el valor true si el operando de la izquierda es menor al de la derecha (&lt;)</li>
+                <li><b>Menor o igual que</b> Devuelve el valor true si el operando de la izquierda es menor o igual al de la derecha (&lt;=)</li>
+            </ul>
+            <h3>Operadores aritméticos</h3>
+            <ul>
+                <li><b>incremento (++)</b> Incrementa en una unidad al operando
+                    <ul>
+                        <li>Si se usa ++x devuelve el valor del operando despues de añadirle 1. Ejemplo: si x=3 y se usa ++x entonces devuelve 4. </li>
+                        <li>Si se usa x++ devuelve el valor del operando antes de añadirle 1. Ejemplo: si x=3 y se usa x++ entonces devuelve 3 y después establece 4.</li>
+                    </ul>
+                </li>
+                <li><b>decremento (--)</b> Resta una unidad al operando, y depende su posición respecto al operando tiene el mismo comportamiento que el incremento.
+                    <ul>
+                        <li>Si se usa --x y x=3 entonces x=2</li>
+                        <li>Si se usa x-- y x=3 entonces devuelve 3 y luego establece que x=2</li>
+                    </ul>
+                </li>
+            </ul>
+            <h2>6) ¿Cuáles son las estructuras de control de JS?</h2>
+            <ul>
+                <li><b>Estructuras de control condicionales</b>
+                    <ul>
+                        <li><b>If</b> Si se cumple la condición que se establezca, hacer tal cosa.<br/> Ejemplo:
+                            <br/> if (nota >= 5) { <br/> //las instrucciones se esriben acá <br/> console.log("¡Alumno aprobado!");<br/> }
+                        </li>
+                        <li><b>If/else</b> Se establece una alternativa a una condición. Se establece una acción "A" si la condición se cumple, si no se cumple, se ejecuta la acción "B". <br/> Ejemplo: <br/> if (nota >= 5) { <br/> //las instrucciones se esriben
+                            acá <br/> estoy=" aprobado!";<br/> } else { <br/> //acción alternativa <br/> estoy=" desaprobado!"; <br/> } <br/> console.log("Estoy", estoy);</li>
+                        <li><b>?: (Operador ternario)</b> Equivalente a if/else, en una sóla línea, es un método abreviado. </li>
+                        <li><b>Switch</b> Estructura para casos específicos, similar a varios if/else anidados. Está indicado para utilizar sólo con casos con valores concretos y específicos.</li>
+                    </ul>
+                </li>
+                <li>Bucles y repeticiones
+                    <ul>
+                        <li><b>While</b></li>
+                        <li><b>For</b></li>
+                        <li><b>do...while</b></li>
+                        <li><b>for...in</b></li>
+                        <li><b>for...of</b></li>
+                        <li><b></b></li>
+                    </ul>
+                </li>
+                <li></li>
+            </ul>
             <h2>7) ¿Qué es el objeto dom en JS? Y ¿Cómo trabaja?</h2>
             <p></p>
             <h2>8) ¿Qué función tiene en JS el Object Map?</h2>
