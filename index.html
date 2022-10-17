@@ -64,16 +64,18 @@
             <p>Las variables son depósitos donde se guarda información, un espacio de almacenamiento de reserva en memoria. Tienen un nombre y un tipo (valor entero, valor real, cadena de caracteres, valores lógicos). Los nombres de una variable puede contener
                 sólo caracteres alfanuméricos, es decir, letras de la A a la Z y números del 0 al 9, guión bajo (_) y dólar ($) también son aceptados. Una variable no puede tener el mismo nombre que una palabra clave del lenguaje. Ejemplos:</p>
             <h3>Tipos de datos</h3>
+            <p>Como JavaScript es un lenguaje de tipo dinámico, al declarar una variable no es necesario especificar el tipo de dato.</p>
             <p>Una variable puede almacenar:</p>
             <ul>
                 <li><b>Valores Enteros</b> (150, 780, etc.)</li>
                 <li><b>Valores Reales</b> (2.25, 8.90, 7.03, etc.)</li>
                 <li><b>Cadenas de caracteres</b> ('Zahira', 'Fernandez', 'Audi', etc.), para guardar y manipular texto. Se escrben entre comillas dobles, simples o francesas. Dentro de una cadena de texto se pueden usar comillas siempre y cuando no sean del
                     mismo tipo que las comillas que rodean a la cadena de caracteres.</li>
-                <li><b>Valores lógicos</b> (true,false), aquellos que solo pueden tener 2 valores, verdadero o falso. El valor de 0, null, undefined o cadena de texto vacía es <b>falso</b>. </li>
+                <li><b>Valores lógicos</b> (true,false), aquellos que solo pueden tener 2 valores, verdadero o falso. El valor de 0, null, undefined, NaN o cadena de texto vacía (" ") es <b>falso</b>. El resto de valores, incluídos todos los objetos, se toman
+                    como verdaderos cuando se pasan a una sentencia condicional.</li>
                 <li><b>Matrices</b></li>
                 <li><b>Symbol</b> tipo de dato cuyos casos son únicos e inmutables.</li>
-                <li><b>Object</b> puede contener mas variables en su interior</li>
+                <li><b>Object</b> puede contener mas variables en su interior.</li>
             </ul>
             <h3>Expresiones regulares</h3>
             <h2>4) ¿Cómo son todas las formas de declaración de funciones en JS?</h2>
@@ -88,30 +90,39 @@
             <ul>
                 <li>var marcaGaseosa = "Fanta";</li>
                 <li>let nombre = "Pepito";</li>
-                <li>const pi = 3.14</li>
-                <li></li>
+                <li>const pi = 3.14;</li>
+                <li>x = 2;</li>
             </ul>
             <p>Las variables siempre se declaran con var, let o const. la palabra var es usada en todos los códigos en todos los códigos JS desde 1995 a 2015. Las palabras let y const fueron añadidas en la versión de JS de 2015. Es por esto que si se quiere
                 ejecutar el código en navegadores antiguos se debe usar var. Como regla general las variables siempre se declaran con const, pero si el valor de la variable puede cambiar entonces se usa let.</p>
+            <h3>Var</h3>
+            <p>Declara una variable, iniciandola opcionalmente en un valor, que podrá cambiar. Su scope es local.</p>
+            <h3>Let</h3>
+            <p>Declara una variable local en un bloque de ámbito, iniciandola opcionalmente en un valor. Su valor puede cambiar.</p>
+            <h3>Const</h3>
+            <p>Declara una variabled e solo lectura en un bloque de ámbito. No es posible cambiar su valor mediante la asignación.</p>
             <h2>5) ¿Cuáles son los operadores y conversión entre tipos?</h2>
             <h3>Operador de asignación</h3>
             <p>El operador de asignacion es el símbolo de igualdad (=), y sirve para asignarle un valor a una variable.</p>
             <h3>Adición o suma </h3>
-            <p>Se usa el símbolo "+"</p>
+            <p>Se usa el símbolo "+" <br/> Ejemplo: a + b</p>
             <h3>Multiplicación</h3>
-            <p>Se usa el símbolo "*"</p>
+            <p>Se usa el símbolo "*" <br/> Ejemplo: a * b</p>
             <h3>Sustracción o resta</h3>
-            <p>Se usa el símbolo "-"</p>
+            <p>Se usa el símbolo "-" <br/> Ejemplo: a - b</p>
             <h3>División</h3>
-            <p>Se usa el símbolo "/"</p>
+            <p>Se usa el símbolo "/" <br/> Ejemplo: a / b</p>
             <h3>Resto o módulo</h3>
-            <p>Se usa el símbolo "%"</p>
+            <p>Se usa el símbolo "%" <br/> Ejemplo: a % b</p>
+            <h3>Exponenciación</h3>
+            <p>Se usa el simbolo "**" <br/> Ejemplo: a ** b -> Eleva "a" a la potencia "b" (a<sup>b</sup>). Equivale a Math.pow(a, b).</p>
             <h3>Operadores de comparación</h3>
+            <p>Aquellos que se utilizan en el código (generalmente, en el interior de un if, aunque no es el único lugar donde se pueden usar) para realizar comprobaciones. Estas expresiones de comparación devuelven un booleano con un valor de true o false.</p>
             <ul>
                 <li><b>Igualdad</b> Devuelve el valor true si ambos operandos son iguales (==)</li>
                 <li><b>Desigualdad</b> Devuelve el valor true si ambos operandos NO son iguales (!=)</li>
                 <li><b>Estrictamente iguales</b> Devuelve el valor true si ambos operandos son iguales y tienen el mismo tipo (===)</li>
-                <li><b>Estrctamente desiguales</b> Devuelve el valor true si ambos operandos no son iguales y/o no son del mismo tipo. </li>
+                <li><b>Estrictamente desiguales</b> Devuelve el valor true si ambos operandos no son iguales y/o no son del mismo tipo. </li>
                 <li><b>Mayor que</b> Devuelve el valor true si el operando de la izquierda es mayor al de la derecha(>)</li>
                 <li><b>Mayor o igual que</b> Devuelve el valor true si el operando de la izquierda es mayor o igual al de la derecha (>=)</li>
                 <li><b>Menor que</b> Devuelve el valor true si el operando de la izquierda es menor al de la derecha (&lt;)</li>
@@ -132,6 +143,22 @@
                     </ul>
                 </li>
             </ul>
+            <h3>Operador de concatenación</h3>
+            <p>Une dos valores de tipo <b>String</b>, devolviendo otro String correspondiente a la unión. <br/> Ejemplo: console.log("soy" + "Zahira"); // Soy Zahira </p>
+            <h3>Operadores binarios</h3>
+            <p>Permiten realizar operaciones básicas trabajando a nivel binario, donde los operandos solo pueden tomar valores de 0 o 1.</p>
+            <ul>
+                <li><b>AND</b>
+                    <p>Se usa el símbolo "&" <br/> Ejemplo: <br/> a & b -> Devuelve 1 si ambos operandos son 1.</p>
+                </li>
+                <li><b>OR</b>
+                    <p>Se usa el símbolo "|" <br/> Ejemplo: <br/> a | b -> Devuelve 1 si al menos un operando es 1.</p>
+                </li>
+                <li><b>XOR (OR exclusivo)</b>
+                    <p>Se usa el símbolo "^" <br/> Ejemplo: <br/> a ^ b -> Devuelve 1 si ambos operandos son diferentes.</p>
+                </li>
+            </ul>
+            <h3>Conversión de tipos de datos</h3>
             <h2>6) ¿Cuáles son las estructuras de control de JS?</h2>
             <ul>
                 <li><b>Estructuras de control condicionales</b>
@@ -145,32 +172,64 @@
                         <li><b>Switch</b> Estructura para casos específicos, similar a varios if/else anidados. Está indicado para utilizar sólo con casos con valores concretos y específicos.</li>
                     </ul>
                 </li>
-                <li>Bucles y repeticiones
+                <br/>
+                <li><b>Bucles y repeticiones</b>
+                    <p>Son una forma rápida y sencilla de hacer algo repetidamente</p>
                     <ul>
-                        <li><b>While</b></li>
-                        <li><b>For</b></li>
-                        <li><b>do...while</b></li>
+                        <li><b>While</b>
+                            <p>Ejecuta sus sentencias mientras la condición sea verdadera.</p>
+                        </li>
+                        <li><b>For</b>
+                            <p>El bucle se repite hasta que la condición especificada sea falsa.</p>
+                        </li>
+                        <li><b>do...while</b>
+                            <p>Se repite hasta que la condición especificada sea falsa. La sentencia se ejecuta antes de ser evaluada. Si la condición es true, la sentencia se ejecuta de nuevo, osea que la sentencia al menos una vez va a ser ejecutada.</p>
+                        </li>
                         <li><b>for...in</b></li>
-                        <li><b>for...of</b></li>
-                        <li><b></b></li>
+                        <li><b>for...of</b>
+                            <p>Estructura repetitiva para recorrer todos los elementos de un array, string, map, set etc.</p>
+                        </li>
+                        <li><b>Bucles sobre arrays</b></li>
                     </ul>
                 </li>
-                <li></li>
             </ul>
             <h2>7) ¿Qué es el objeto dom en JS? Y ¿Cómo trabaja?</h2>
-            <p></p>
+            <p>El <b>modelo de objeto de documento</b> es una interfaz de programación para documentos HTML y XML. Facilita la representación estructurada del documento y define la forma en que los programas pueden acceder para modificar su estructura, estilo
+                y/o contenido. Representa al documento como un grupo de nodos y objetos estructurados que tienen propiedades y métodos. Conecta páginas web a scripts o lenguajes de programación.</p>
+            <p>El DOM es una representación completamente orientada al objeto de la página web. Puede ser modificado con un lenguaje de script como JavaScript.</p>
+            <p>Este no es un lenguaje de programación pero sin él, el lenguaje JavaScript no tiene ningún modelo o noción de las páginas web, de la páginas XML ni de los elementos con los cuales es usualmente relacionado.</p>
+            <p>JavaScript y el DOM estaban herméticamente enlazados, pero después se desarrollaron como entidades separadas. El contenido de la página es almacenado en DOM y el acceso y la manipulación se hace vía JavaScript. El DOM fue diseñado para ser
+                independiente de cualquier lenguaje de programación particular, hace que la presentación estructural del documento sea disponible desde un simple y consistente API.</p>
+            <p>Cuando se crea un script, esté en un elemento &lt;SCRIPT&gt; o incluido en una página web por la instrucción de cargar un script, inmediatamente está disponible para usarlo con el API, accediendo así a los elementos document o window, para
+                manipular el documento mismo o sus diferentes partes, las cuales son los varios elementos de una página web.</p>
             <h2>8) ¿Qué función tiene en JS el Object Map?</h2>
             <p></p>
             <h2>9) ¿Cuáles son todos los eventos que trabaja JS?</h2>
             <p></p>
             <h2>10) Con toda la investigación que generaron deben de generar un formulario que realice las siguientes funciones.
                 <ol type="a">
-                    <li>¿Qué obtenga los datos del input?.</li>
-                    <li>¿Qué verifique los datos que se ingresan en el input?.</li>
-                    <li>¿Qué el formulario presente una calculo de sumatoria para validar ¿Qué no sos un robot”?.</li>
+                    <li>Que obtenga los datos del input.</li>
+                    <li>Que verifique los datos que se ingresan en el input.</li>
+                    <li>Que el formulario presente una calculo de sumatoria para validar "que no sos un robot”.</li>
                 </ol>
             </h2>
-            <p></p>
+
+            <form method="post" action="js/script.js">
+                <label for="nombre">Nombre</label><br />
+                <input type="text" name="nombre" id="nombre" /><br />
+                <label for="apellido">Apellido</label><br />
+                <input type="text" name="apellido" id="apellido" /><br />
+                <label for="edad">EDAD</label><br />
+                <input type="text" name="edad" id="edad" maxlength="2" /><br />
+                <label>Sexo</label><br />
+                <input type="radio" name="sexo" value="Hombre" checked="checked" id="hombre" /><label for="hombre">Hombre</label><br />
+                <input type="radio" name="sexo" value="Mujer" id="mujer" /><label for="mujer">Mujer</label><br />
+                <input type="checkbox" name="suscribir" value="suscribir" id="robot" /> <label for="robot">No soy un robot </label><br />
+                <button>guardar</button>
+                <input type="submit" name="borrar" value="borrar los datos introducidos" />
+            </form>
+            <script>
+            </script>
         </div>
     </div>
 
